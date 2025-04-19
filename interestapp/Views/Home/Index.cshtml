@@ -1,0 +1,16 @@
+﻿@model interestapp.Models.InterestCalc
+
+<form method="post">
+    <label>Principal:</label>
+    <input type="number" asp-for="Principal" /><br />
+    <label>Time:</label>
+    <input type="number" asp-for="Time" /><br />
+    <label>Rate:</label>
+    <input type="number" asp-for="Rate" /><br />
+    <button type="submit">Calculate</button>
+</form>
+
+@if (Model.Principal != 0 && Model.Time != 0 && Model.Rate != 0)
+{
+    <h3>Simple Interest: @Model.SimpleInterest</h3>
+}
