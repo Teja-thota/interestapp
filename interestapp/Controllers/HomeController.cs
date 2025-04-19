@@ -31,6 +31,11 @@ namespace interestapp.Controllers
             return View(interest); // If invalid, return a blank model
         }
 
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
